@@ -18,4 +18,22 @@
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>
   </persistence-unit>
+  <persistence-unit name="smsCA2PU_TEST" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>entity.Address</class>
+    <class>entity.CityInfo</class>
+    <class>entity.Company</class>
+    <class>entity.Hobby</class>
+    <class>entity.InfoEntity</class>
+    <class>entity.Person</class>
+    <class>entity.Phone</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@datdb.cphbusiness.dk:1521:dat"/>
+      <property name="javax.persistence.jdbc.user" value="SEM2_TEST_GR10"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.password" value="SEM2_TEST_GR10"/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+    </properties>
+  </persistence-unit>
 </persistence>
