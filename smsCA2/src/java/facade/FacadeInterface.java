@@ -3,12 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entity;
+package facade;
+
+import entity.CityInfo;
+import entity.Company;
+import entity.Hobby;
+import entity.Person;
+import java.util.List;
 
 /**
  *
- * @author MS
+ * @author Søren
  */
-public class startBug {
+public interface FacadeInterface {
+    
+  
+    
     
 }
