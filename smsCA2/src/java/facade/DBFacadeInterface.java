@@ -15,9 +15,10 @@ import java.util.List;
  *
  * @author Søren
  */
-public interface FacadeInterface {
+public interface DBFacadeInterface {
     
-  
-    
+  public List<Person> getPersonsList();
+  public Person getPersonByID(int id);
+
     
 }

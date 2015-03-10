@@ -5,6 +5,9 @@
  */
 package Tester;
 
+import entity.Company;
+import entity.Person;
+import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
 /**
@@ -14,7 +17,18 @@ import javax.persistence.Persistence;
 public class Test {
     
     public static void main(String[] args) {
-        Persistence.generateSchema("smsCA2PU", null);
+        //Persistence.generateSchema("smsCA2PU", null);
+        EntityManager em = Persistence.createEntityManagerFactory("smsCA2PU").createEntityManager();
+        
+        Person p1 = new Person("Jannik", "Green", "Per@lars.hans");
+        Person p2 = new Person("Per", "Hansen", "Per@asd.hans");
+        Company c1 = new Company("Snaps A/S", "Vi laver snaps", 24832, -7, 1337, "123@asd.dk");
+        
+        em.getTransaction().begin();
+        em.persist(p1);
+        em.persist(p2);
+        em.persist(c1);
+        em.getTransaction().commit();
     }
     
 }

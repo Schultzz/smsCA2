@@ -8,12 +8,16 @@ package entity;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 /**
  *
  * @author Søren
  */
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "Person.findAll", query = "SELECT p FROM Person p")})
 public class Person extends InfoEntity {
    
     private String firstName;
