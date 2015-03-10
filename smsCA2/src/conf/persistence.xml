@@ -15,7 +15,7 @@
       <property name="javax.persistence.jdbc.user" value="cphml315"/>
       <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
       <property name="javax.persistence.jdbc.password" value="cphml315"/>
-      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>
   <persistence-unit name="smsCA2PU_TEST" transaction-type="RESOURCE_LOCAL">
