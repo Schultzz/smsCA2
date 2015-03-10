@@ -19,6 +19,12 @@ public interface DBFacadeInterface {
     
   public List<Person> getPersonsList();
   public Person getPersonByID(int id);
-
-    
+  public List<Company> getCompaniesList();
+  public Company getCompanyByID(int id);
+  public Person addPerson(Person person);
+  public Company addCompany(Company company);
+  public Person editPerson(Person person);
+  public Company editCompany(Company company);
+  
+  
 }
